@@ -1345,9 +1345,10 @@ var pJS = function(tag_id, params){
     var fps_limit = pJS.particles.fps_limit;
     if (fps_limit <= 0) {
     } else {
-        setTimeout(function () {
-            defaultDraw()
-        }, 1000 / fps_limit)
+        setTimeout(function() {
+        defaultDraw();
+        document.getElementById('particles-js').style.opacity = 0.3;
+      }, 1000 / fps_limit);
     }
 
   };
